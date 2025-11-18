@@ -58,6 +58,7 @@ packages/[package-name]/docs/
 ### Core Documentation
 - ✅ **[README](./README.md)** - Documentation guide and quick links
 - ✅ **[Root README](../README.md)** - Project overview and getting started
+- ✅ **[MCP Servers](./MCP.md)** - Claude Code MCP configuration and setup
 
 ### Architecture
 - 📝 **[ARCHITECTURE](./current/ARCHITECTURE.md)** - System architecture overview

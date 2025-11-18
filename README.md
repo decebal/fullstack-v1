@@ -46,6 +46,7 @@ Everything you need to build a production-ready full-stack SaaS. An opinionated 
 [Trigger.dev](https://trigger.dev/) - Background jobs<br>
 [PostHog](https://posthog.com/) - Product analytics and feature flags<br>
 [Playwright](https://playwright.dev/) - End-to-end testing<br>
+[Claude Code](https://claude.com/code) - AI-assisted development with MCP<br>
 [react-safe-action](https://next-safe-action.dev) - Validated Server Actions<br>
 [nuqs](https://nuqs.47ng.com/) - Type-safe search params state manager<br>
 [next-themes](https://next-themes-example.vercel.app/) - Theme manager<br>
@@ -71,10 +72,12 @@ Everything you need to build a production-ready full-stack SaaS. An opinionated 
 ├── tooling                      # Shared configuration used by apps and packages
 │    ├── e2e                     # Playwright end-to-end tests
 │    └── typescript              # Shared TypeScript configuration
-├── .cursorrules                 # Cursor rules specific to this project
+├── docs/                        # Documentation
+├── .clauderc                    # Claude Code CLI instructions
+├── .mcp.json                    # MCP servers for Claude Code
 ├── biome.json                   # Biome configuration
 ├── turbo.json                   # Turbo configuration
-├── LICENSE
+├── LICENSE.md
 └── README.md
 ```
 
@@ -164,6 +167,21 @@ bun clean:workspaces # Clean all build outputs
 - **Background jobs** - Trigger.dev for async tasks
 - **Rate limiting** - Upstash Redis-based rate limiting
 - **E2E testing** - Playwright for reliable end-to-end testing
+
+## AI-Assisted Development
+
+This project is optimized for development with [Claude Code CLI](https://claude.com/code):
+
+- **`.clauderc`** - AI assistant instructions and development guidelines
+- **`.mcp.json`** - MCP servers configuration (Playwright, Sentry, Trigger.dev)
+- **[MCP Documentation](./docs/MCP.md)** - MCP servers setup and usage
+
+Claude Code provides enhanced capabilities through Model Context Protocol (MCP):
+- Automated Playwright test execution and debugging
+- Sentry error monitoring and analysis
+- Trigger.dev background job management
+
+**Note**: This project uses Claude Code CLI, not Cursor IDE or other AI coding assistants.
 
 ## Contributing
 

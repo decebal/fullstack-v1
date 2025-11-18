@@ -1,6 +1,8 @@
 # MCP Servers Configuration
 
-This file configures Model Context Protocol (MCP) servers for enhanced AI assistant capabilities.
+This file configures Model Context Protocol (MCP) servers for Claude Code CLI (https://claude.com/code).
+
+**Note**: This project uses Claude Code CLI, not Cursor IDE. Configuration is in `.clauderc`, not `.cursorrules`.
 
 ## Configured Servers
 
@@ -71,13 +73,21 @@ SENTRY_ORG=your-org
 SENTRY_PROJECT=your-project
 ```
 
-## Usage
+## Usage with Claude Code CLI
 
-These MCP servers are automatically available to AI assistants (like Claude Code) when configured in `.mcp.json`. The AI can use them to:
+These MCP servers are automatically available to Claude Code when configured in `.mcp.json`.
 
+When using Claude Code CLI in this repository, it will:
+- Automatically load MCP servers from `.mcp.json`
+- Use AI assistant instructions from `.clauderc`
+- Have access to enhanced capabilities through MCP servers
+
+Claude Code can use these servers to:
 - Run and debug Playwright tests
-- Investigate Sentry errors
-- Monitor and manage Trigger.dev jobs
+- Investigate Sentry errors and stack traces
+- Monitor and manage Trigger.dev background jobs
+
+**Note**: This is configured for Claude Code CLI, not Cursor IDE or other editors.
 
 ## Troubleshooting
 
@@ -95,8 +105,22 @@ These MCP servers are automatically available to AI assistants (like Claude Code
 - Verify API credentials are set
 - Ensure `bunx` can access `trigger.dev` CLI
 
+## Project AI Configuration
+
+This project uses:
+- **`.clauderc`** - Main AI assistant instructions for Claude Code CLI
+- **`.mcp.json`** - MCP servers configuration (this file)
+- **`.claude/`** - Claude Code specific settings
+  - `TDD_CHECKLIST.md` - Test-Driven Development checklist
+  - `settings.local.json` - Local user settings (git-ignored)
+
+**Not used**:
+- `.cursorrules` - We use Claude Code, not Cursor IDE
+- `.aiderignore` - We use Claude Code, not Aider
+
 ## References
 
+- [Claude Code Documentation](https://claude.com/code)
 - [MCP Documentation](https://modelcontextprotocol.io/)
 - [Playwright MCP](https://github.com/playwright/mcp)
 - [Sentry MCP](https://github.com/getsentry/mcp-server-sentry)

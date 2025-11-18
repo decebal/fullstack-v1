@@ -10,6 +10,7 @@ This directory contains technical documentation for the Fullstack V1 project.
 - 📝 **[Root README](../README.md)** - Project overview and getting started
 - 🏗️ **[Architecture](./current/ARCHITECTURE.md)** - System architecture overview
 - 🚀 **[Getting Started](./guides/GETTING_STARTED.md)** - Quick start guide
+- 🤖 **[MCP Servers](./MCP.md)** - Claude Code MCP setup and usage
 
 ## Documentation Structure
 
