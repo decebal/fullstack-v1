@@ -19,6 +19,21 @@ Everything you need to build a production-ready full-stack SaaS. An opinionated 
 
 > **Note:** This is a fork and evolution of the [Midday V1](https://github.com/midday-ai/v1) starter kit, enhanced with TanStack Query for robust server state management and additional full-stack features.
 
+## 🚀 Quick Start
+
+Create your own project from this template:
+
+```bash
+bunx degit wolven-tech/fullstack-v1 my-saas-app
+cd my-saas-app
+bun install
+```
+
+Then follow the [Getting Started Guide](./docs/guides/GETTING_STARTED.md) to:
+- Set up environment variables
+- Configure services (Supabase, PostHog, Sentry, etc.)
+- Customize branding and content
+
 ## 📖 Documentation
 
 - **[Documentation Hub](./docs/README.md)** - Complete documentation index
@@ -95,29 +110,41 @@ Everything you need to build a production-ready full-stack SaaS. An opinionated 
 
 ## Getting Started
 
-1. Install dependencies using bun:
+### From Template (Recommended)
+
+```bash
+bunx degit wolven-tech/fullstack-v1 my-saas-app
+cd my-saas-app
+bun run setup
+```
+
+### Manual Setup
+
+1. **Install dependencies**:
 
 ```sh
 bun install
 ```
 
-2. Copy `.env.example` to `.env` and update the variables.
+2. **Copy environment files**:
 
 ```sh
-# Copy .env.example to .env for each app
 cp apps/api/.env.example apps/api/.env
-cp apps/app/.env.example apps/app/.env
-cp apps/web/.env.example apps/web/.env
+cp apps/app/.env.example apps/app/.env.local
+cp apps/web/.env.example apps/web/.env.local
 ```
 
-3. Start the development server:
+3. **Update environment variables** with your actual service credentials
+
+4. **Start development server**:
 
 ```sh
-bun dev              # Start all apps in development mode
-bun dev:web          # Start the web app only
-bun dev:app          # Start the app only
-bun dev:api          # Start Supabase locally
+bun dev              # Start all apps
+bun dev:app          # Start app only (port 3000)
+bun dev:web          # Start web only (port 3001)
 ```
+
+See the [Getting Started Guide](./docs/guides/GETTING_STARTED.md) for detailed setup instructions.
 
 ## Available Scripts
 
