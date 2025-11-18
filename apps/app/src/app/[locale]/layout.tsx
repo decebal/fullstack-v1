@@ -1,5 +1,6 @@
 import "@v1/ui/globals.css";
 import { Footer } from "@/components/footer";
+import { ReactQueryProvider } from "@v1/react-query";
 import { cn } from "@v1/ui/cn";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
@@ -7,8 +8,8 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
-  title: "Create v1",
-  description: "Production ready Next.js app",
+  title: "Fullstack V1",
+  description: "Production-ready full-stack SaaS monorepo starter",
 };
 
 export const viewport = {
@@ -37,9 +38,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <ReactQueryProvider>
+            {children}
 
-          <Footer />
+            <Footer />
+          </ReactQueryProvider>
         </ThemeProvider>
       </body>
     </html>

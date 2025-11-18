@@ -10,7 +10,9 @@
       "Bash(bun run dev)",
       "Bash(bun run typecheck:*)",
       "Bash(bunx playwright install:*)",
-      "Bash(bunx playwright test:*)"
+      "Bash(bunx playwright test:*)",
+      "Bash(bun typecheck:*)",
+      "Bash(turbo typecheck:*)"
     ],
     "deny": [],
     "ask": []
